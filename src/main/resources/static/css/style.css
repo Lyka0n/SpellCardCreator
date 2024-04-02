@@ -1,0 +1,58 @@
+@import url("header.css");
+@import url("card.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    background: #131313 url(../../images/Background.png) center 0rem/100% no-repeat;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /* Chrome, Safari, Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard syntax */
+}
+
+/*---------------------SCROLLBAR---------------------*/
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/*-----------FOOTER-----------*/
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    text-align: right;
+}
+
+footer a, a:link, a:visited, a:hover {
+    position: relative;
+    font-size: small;
+    color: #d6d6d6e1;
+    padding-right: 0.1%;
+    text-decoration: none; 
+}

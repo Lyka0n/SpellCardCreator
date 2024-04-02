@@ -1,0 +1,233 @@
+/*---------------------HEADER---------------------*/
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.header ul {
+    outline-style: solid;
+    outline-color: rgb(182, 0, 0);
+    outline-width: 0.15rem;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    list-style-type: none; /* Removes bullets */
+    height: 4rem;
+    padding: 0 0.3rem;
+}
+
+.header li {
+    display: list-item;
+    padding: 0 0.5rem;
+}
+
+.header span {
+    height: 100%;
+}
+
+.header .logo {
+    width: 3rem;
+    margin: 0.19rem 0 0 0;
+}
+
+.header .font {
+    color: rgb(235, 235, 235);
+    font-family: sans-serif;
+}
+
+.header .font #title {
+    text-transform: none !important;
+    font-weight: bold;
+}
+
+.header .font p{
+    text-transform: uppercase;
+    margin: 0.3rem 0 0 0;
+    cursor: pointer;
+}
+
+.header .divider {
+    width: 0.06rem;
+    height: 3rem;
+    background-color: #919191;
+    box-shadow: 0 0 6px 1px rgb(44, 44, 44);
+}
+
+/*---------------------NEW CARD MENU---------------------*/
+
+.newcard-dropdown {
+    position: absolute;
+    top: calc(100% + 0.15rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 4;
+    display: none;
+}
+
+.newcard-dropdown #inputForm {
+    display: flex;
+    justify-content: center;
+    height: 9rem;
+    background-color: #f1f1f1;
+    padding: 0.5rem 0;
+    border: 0.1rem solid #ccc;
+    box-shadow: 0 0.5rem 0.37rem -0.2rem rgba(0, 0, 0, 0.3);
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.05)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+.newcard-dropdown table{
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    border-collapse: collapse;
+    border-right: 1px solid rgb(143, 143, 143);
+}
+
+.newcard-dropdown table td {
+    height: 40px;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.newcard-dropdown .buttons-table {
+    display: flex;
+    justify-content: center;
+    width: 15% !important;
+    border: none !important;
+}
+
+.newcard-dropdown input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    display: inline-block;
+    border: 0.06rem solid #ccc;
+    box-sizing: border-box;
+    border-radius: 0.25rem;
+}
+
+.newcard-dropdown input[type="checkbox"] {
+    margin-top: 0.28rem;
+}
+
+.newcard-dropdown textarea {
+    height: 3.3rem;
+    resize: none;
+}
+
+.newcard-dropdown .button {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.newcard-dropdown .button:hover {
+    background-color: #45a049;
+}
+
+.newcard-dropdown #reset {
+    background-color: #c22c2c !important;
+}
+
+.newcard-dropdown #reset:hover {
+    background-color: #a32a2a !important;
+}
+
+.newcard-dropdown .components {
+    display: flex;
+    justify-content: space-around;
+}
+
+.newcard-dropdown .components-checkbox-verbal::before,
+.newcard-dropdown .components-checkbox-somatic::before,
+.newcard-dropdown .components-checkbox-material::before {
+    content: attr(value);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+.newcard-dropdown .components input[type="checkbox"]{
+    -webkit-appearance: initial;
+    appearance: initial;
+    width: 2rem;
+    height: 2rem;
+    background: rgba(19, 19, 19, 0.144);
+    position: relative;
+    border-radius: 0.07rem;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+.newcard-dropdown .components input[type="checkbox"]:checked {
+    background: rgb(214, 0, 0);
+    color: white;
+}
+
+.newcard-dropdown #spellConcentration {
+    position: relative;
+    top: -2%;
+    left: 1%;
+}
+
+/*---------------------NEW CARD MENU RESIZE---------------------*/
+
+@media only screen and (max-width: 1100px) {
+    .newcard-dropdown td {
+        font-size: 90%;
+    }
+
+    .newcard-dropdown .components input[type="checkbox"]{
+        -webkit-appearance: initial;
+        appearance: initial;
+        width: 1.1rem;
+        height: 1.1rem;
+        background: rgba(19, 19, 19, 0.144);
+        position: relative;
+        border-radius: 0.06rem;
+        top: 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .dropdown{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.5s, opacity 0.5s, left 0.5s ease-in-out;
+        left: 100%;
+    }
+    
+    .dropdown.active{
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+    }  
+}

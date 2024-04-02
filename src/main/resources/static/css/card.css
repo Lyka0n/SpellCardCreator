@@ -1,0 +1,493 @@
+/*---------------------CARDS---------------------*/
+
+.cards-collection {
+    z-index: 1;
+    margin: 10%;
+    margin-top: calc(10% + 4rem);
+    padding: 2% 0;
+    background-color: rgba(15, 15, 15, 0.85);
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card-container {
+    flex: 0 0 calc(16,6% - 33px);
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.card { /*Style is also in the function that creates cards*/
+    width: 11.4375rem;
+    height: 16rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.375rem;
+    overflow: hidden;
+    margin: 1.25rem;
+    cursor: default;
+    user-select: none;
+    transform: perspective(1500px) rotateX(12deg);
+    box-shadow: 1px 1px 5px 6px rgba(15, 15, 15, 0.5);
+    transition: transform 0.2s ease 0s;
+}
+
+.card:hover {
+    transform: perspective(3000px) rotateX(5deg);
+}
+
+.card:focus {
+    outline: none !important;
+}
+
+.card-container {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-container:hover {
+    transform: scale(1.8);
+    z-index: 3;
+}
+
+.card-container:not(:hover) {
+    transform: scale(1);
+}
+
+/*CARD NAME*/
+
+.spell-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    margin-top: 0.4rem;
+    height: 0.95rem;
+    overflow: hidden;
+}
+
+.spell-name h3 {
+    font-family: "Draconis", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+    font-size: 90%;
+    transform: scale(1, .8);
+    text-transform:uppercase;
+}
+
+/*LEVEL AND SCHOOL*/
+
+.spell-levelAndSchool {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 0.5rem;
+}
+
+.spell-levelAndSchool h6 {
+    font-size: 40%;
+    color: #f0f0f0;
+}
+
+/*SPAN*/
+
+Span h3 {
+    color: #de3f17;
+}
+
+.font-colors-Bard h3 {
+    color: #c034a1 !important;
+}
+
+.font-colors-Cleric h3 {
+    color: #d3a122 !important;
+}
+
+.font-colors-Druid h3 {
+    color: #64a84c !important;
+}
+
+.font-colors-Paladin h3 {
+    color: #17c2de !important;
+}
+
+.font-colors-Ranger h3 {
+    color: #a46f50 !important;
+}
+
+.font-colors-Sorcerer h3 {
+    color: #935795 !important;
+}
+
+.font-colors-Warlock h3 {
+    color: #675493 !important;
+}
+
+.font-colors-Wizard h3 {
+    color: #557bb2 !important;
+}
+
+/*CASTING TIME*/
+
+.spell-castingtime {
+    width: 5.2rem;
+    height: 1.35rem;
+    margin-left: 0.4rem;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.spell-castingtime h3 {
+    font-family: "Draconis", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+    transform: scale(1.4,1.0);
+    font-size:55%;
+}
+
+.spell-castingtime h6 {
+    font-size:45%;
+    margin-top: 0.05rem;
+}
+
+/*RANGE*/
+
+.spell-range {
+    width: 5.2rem;
+    height: 1.35rem;
+    margin-right: 0.4rem;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.spell-range h3 {
+    font-family: "Draconis", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+    transform: scale(1.4,1.0);
+    font-size:55%;
+}
+
+.spell-range h6 {
+    font-size:45%;
+    margin-top: 0.05rem;
+}
+
+/*COMPONENTS*/
+
+.spell-components {
+    width: 5.2rem;
+    height: 1.35rem;
+    margin-left: 0.4rem;
+    margin-top: 0.12rem;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.spell-components h3 {
+    font-family: "Draconis", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+    transform: scale(1.4,1.0);
+    font-size:55%;
+}
+
+.spell-components h6 {
+    font-size:45%;
+    margin-top: 0.05rem;
+}
+
+/*DURATION*/
+
+.spell-duration {
+    width: 5.2rem;
+    height: 1.35rem;
+    margin-right: 0.4rem;
+    margin-top: 0.12rem;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.spell-duration h3 {
+    font-family: "Draconis", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+    transform: scale(1.4,1.0);
+    font-size: 55%;
+}
+
+.spell-duration h6 {
+    font-size: 45%;
+    margin-top: 0.05rem;
+}
+
+.spell-duration .spellConcentration {
+    position: absolute;
+    width: 1rem;
+    height: 1.1rem;
+    right: 0rem;
+}
+
+
+/*DESCRIPTION*/
+
+.spell-description {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    margin-top: 3.8rem;
+    margin-bottom: 0.9em;
+    height: 6rem;
+    font-size: 40%;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+/*HIGHER LEVELS*/
+
+.spell-higherlevels {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 0.5rem;
+    position: relative;
+}
+
+.spell-higherlevels h6 {
+    font-size: 40%;
+    color: #ededed;
+}
+
+.spell-higherlevelsDescription p {
+    margin-top: 0.35rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    font-size: 40%;
+    word-wrap: break-word;
+}
+
+.spell-higherlevelsDivider {
+    background-color: #17c2de;
+}
+
+.spell-higherlevels-Base {
+    background-color: #de3f17 !important;
+    height: 0.5rem;
+    width: 10.6375rem;
+    position: absolute;
+    top: 12rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.spell-higherlevels-Bard {
+    background-color: #c034a1 !important;
+    height: 0.5rem;
+    width: 10.6375rem;
+    position: absolute;
+    top: 12rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.spell-higherlevels-Cleric {
+    background-color: #d3a122 !important;
+    height: 0.5rem;
+    width: 10.6375rem;
+    position: absolute;
+    top: 12rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.spell-higherlevels-Druid {
+    background-color: #64a84c !important;
+    height: 0.5rem;
+    width: 10.6375rem;
+    position: absolute;
+    top: 12rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.spell-higherlevels-Paladin {
+    background-color: #17c2de !important;
+    height: 0.5rem;
+    width: 10.6375rem;
+    position: absolute;
+    top: 12rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.spell-higherlevels-Ranger {
+    background-color: #a46f50 !important;
+    height: 0.5rem;
+    width: 10.6375rem;
+    position: absolute;
+    top: 12rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.spell-higherlevels-Sorcerer {
+    background-color: #935795 !important;
+    height: 0.5rem;
+    width: 10.6375rem;
+    position: absolute;
+    top: 12rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.spell-higherlevels-Warlock {
+    background-color: #675493 !important;
+    height: 0.5rem;
+    width: 10.6375rem;
+    position: absolute;
+    top: 12rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.spell-higherlevels-Wizard {
+    background-color: #557bb2 !important;
+    height: 0.5rem;
+    width: 10.6375rem;
+    position: absolute;
+    top: 12rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+/*BUTTONS*/
+
+.delete-button {
+    padding: 3px 5px;
+    border: none;
+    width: 13px;
+    height: 13px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    cursor: pointer;
+    margin-left: 6%;
+    margin-top: 2%;
+    position: absolute;
+    top: 91%;
+    left: 52.5%;
+    z-index: 11;
+}
+
+
+.save-button {
+    padding: 3px 5px;
+    border: none;
+    width: 13px;
+    height: 13px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    cursor: pointer;
+    margin-top: 2%;
+    position: absolute;
+    top: 91%;
+    left: 67.5%;
+    z-index: 11;
+}
+
+.delete-image {
+    position: absolute;
+    top: 92.5%;
+    left: 58.5%;
+}
+
+.save-image {
+    position: absolute;
+    top: 92.5%;
+    left: 68%;
+}
+
+.delete-image,
+.save-image {
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-container:hover .delete-image,
+.card-container:hover .save-image {
+    transform: scale(1);
+}
+
+.delete-image,
+.save-image {
+    width: 13px !important; /* desired width */
+    height: 13px !important; /* desired height */
+}
+
+/*--------------HOLO--------------*/
+
+:root {
+    --color1: rgb(173, 156, 0);
+    --color2: rgb(255, 136, 0);
+}
+
+.card:before,
+.card:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    opacity: .5;
+    mix-blend-mode: color-dodge;
+    transition: all .33s ease;
+    z-index: 10;
+}
+
+.card.active:before,
+.card:hover:before {
+    animation: none;
+    background-image: linear-gradient(
+        110deg,
+        transparent 25%,
+        var(--color1) 48%,
+        var(--color2) 52%,
+        transparent 75%
+    );
+    background-position: 50% 50%;
+    background-size: 250% 250%;
+    opacity: .4;
+    filter: brightness(.66) contrast(1.33);
+    transition: all 0.2s ease;
+}

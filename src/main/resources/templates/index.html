@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spell Card Creator | D&D 5th Edition</title>
+    <link rel="icon" type="image/png" href="../images/DND_Logo.png">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script src="../static/js/logic.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <ul>
+            <li><img class="logo"src="../images/Header_Logo.png" alt="logo"></li>
+            <li><span class="font"><h1 id="title">Spell Card Creator</h1></span></li>
+            <li><div class="divider"></div></li>
+            <li>
+                <div class="dropdown">
+                    <span class="font"><p>Create a new card</p></span>
+                    <div class="newcard-dropdown">
+                        <form id="inputForm">
+                            <table class="first-table">
+                                <div>
+                                    <td><b>Spell name</b></td>
+                                    <td>
+                                        <input type="text" id="spellName" maxlength="25" placeholder="Fireball">
+                                    </td>
+                                </div>
+                                <tr>
+                                    <td><b>Spell level</b></td>
+                                    <td>
+                                        <select name="spellLevel" id="spellLevel">
+                                            <option value="Cantrip">Cantrip</option>
+                                            <option value="1st-level">1st level</option>
+                                            <option value="2nd-level">2nd level</option>
+                                            <option value="3rd-level">3rd level</option>
+                                            <option value="4th-level">4th level</option>
+                                            <option value="5th-level">5th level</option>
+                                            <option value="6th-level">6th level</option>
+                                            <option value="7th-level">7th level</option>
+                                            <option value="8th-level">8th level</option>
+                                            <option value="9th-level">9th level</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Class</b></td>
+                                    <td>
+                                        <select name="spellClass" id="spellClass">
+                                            <option value="Base">Base</option>
+                                            <option value="Bard">Bard</option>
+                                            <option value="Cleric">Cleric</option>
+                                            <option value="Druid">Druid</option>
+                                            <option value="Paladin">Paladin</option>
+                                            <option value="Ranger">Ranger</option>
+                                            <option value="Sorcerer">Sorcerer</option>
+                                            <option value="Warlock">Warlock</option>
+                                            <option value="Wizard">Wizard</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="second-table">
+                                <tr>
+                                    <td><b>School of Magic</b></td>
+                                    <td>
+                                        <select name="spellSchool" id="spellSchool">
+                                            <option value="Abjuration">Abjuration</option>
+                                            <option value="Conjuration">Conjuration</option>
+                                            <option value="Divination">Divination</option>
+                                            <option value="Enchantment">Enchantment</option>
+                                            <option value="Evocation">Evocation</option>
+                                            <option value="Illusion">Illusion</option>
+                                            <option value="Necromancy">Necromancy</option>
+                                            <option value="Transmutation">Transmutation</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Casting time</b></td>
+                                    <td>
+                                        <input type="text" id="spellCastingTime" maxlength="14" placeholder="1 action">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Range</b></td>
+                                    <td>
+                                        <input type="text" id="spellRange" maxlength="20" placeholder="150 feet">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="third-table">
+                                <tr>
+                                    <td><b>Components</b></td>
+                                    <td class="components">
+                                        <div class="components-verbal">
+                                            <input type="checkbox" class="components-checkbox-verbal" id="spellComponentsVerbal" name="spellComponents" 
+                                            value="V">
+                                        </div>
+                                        <div class="components-somatic">
+                                            <input type="checkbox" class="components-checkbox-somatic" id="spellComponentsSomatic" name="spellComponents"
+                                            value="S">
+                                        </div>
+                                        <div class="components-material">
+                                            <input type="checkbox" class="components-checkbox-material" id="spellComponentsMaterial" name="spellComponents"
+                                            value="M">
+                                        </div>                                   
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Duration</b></td>
+                                    <td>
+                                        <input type="text" id="spellDuration" maxlength="16" placeholder="Instantaneous">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Concentration</b></td>
+                                    <td>
+                                        <input type="checkbox" id="spellConcentration" name="spellConcentration"
+                                        value="(Concentration)">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="fourth-table">
+                                <tr>
+                                    <td><b>Description</b></td>
+                                    <td>
+                                        <textarea id="spellDescription" name="spellDescription" rows="4" cols="50"
+                                        maxlength="700"
+                                        placeholder="A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame."></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>At higher levels</b></td>
+                                    <td>
+                                        <textarea id="spellHigherLevels" name="spellHigherLevels" rows="4" cols="50"
+                                        maxlength="144"
+                                        placeholder="When you cast this spell using a spell slot of 4th level or higher, the damage increases by 1d6 for each slot level above 3rd."></textarea>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="buttons-table">
+                                <td>
+                                    <input type="button" class="button" id="reset" value="Clear" onclick="empty()">
+                                    <input type="button" class="button" id="upload" value="Add" onclick="add()">
+                                </td>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    
+
+    <div class="cards-collection">
+        <div class="row" id="cards"></div>
+    </div>
+
+    <footer>
+        <a href="https://www.freepik.com" target=”_blank”>Background by Freepik</a>
+    </footer>
+
+    <script>
+        graphic();
+    </script>
+
+</body>
+
+</html>
