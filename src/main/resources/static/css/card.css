@@ -137,65 +137,13 @@ Span h3 {
     color: #557bb2 !important;
 }
 
-/*CASTING TIME*/
+/*CASTING TIME - COMPONENTS*/
 
-.spell-castingtime {
-    width: 5.2rem;
-    height: 1.35rem;
-    margin-left: 0.4rem;
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.spell-castingtime h3 {
-    font-family: "Draconis", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 100;
-    transform: scale(1.4,1.0);
-    font-size:55%;
-}
-
-.spell-castingtime h6 {
-    font-size:45%;
-    margin-top: 0.05rem;
-}
-
-/*RANGE*/
-
-.spell-range {
-    width: 5.2rem;
-    height: 1.35rem;
-    margin-right: 0.4rem;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.spell-range h3 {
-    font-family: "Draconis", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 100;
-    transform: scale(1.4,1.0);
-    font-size:55%;
-}
-
-.spell-range h6 {
-    font-size:45%;
-    margin-top: 0.05rem;
-}
-
-/*COMPONENTS*/
-
+.spell-castingtime, 
 .spell-components {
     width: 5.2rem;
     height: 1.35rem;
     margin-left: 0.4rem;
-    margin-top: 0.12rem;
     float: left;
     display: flex;
     justify-content: center;
@@ -204,6 +152,7 @@ Span h3 {
     overflow: hidden;
 }
 
+.spell-castingtime h3, 
 .spell-components h3 {
     font-family: "Draconis", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 100;
@@ -211,46 +160,60 @@ Span h3 {
     font-size:55%;
 }
 
+.spell-castingtime h6, 
 .spell-components h6 {
     font-size:45%;
     margin-top: 0.05rem;
 }
 
-/*DURATION*/
+/*RANGE - DURATION*/
 
+.spell-range, 
 .spell-duration {
     width: 5.2rem;
     height: 1.35rem;
     margin-right: 0.4rem;
-    margin-top: 0.12rem;
     float: right;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
-    position: relative;
 }
 
+.spell-range h3, 
 .spell-duration h3 {
     font-family: "Draconis", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 100;
     transform: scale(1.4,1.0);
-    font-size: 55%;
+    font-size:55%;
 }
 
+.spell-range h6, 
 .spell-duration h6 {
-    font-size: 45%;
+    font-size:45%;
     margin-top: 0.05rem;
 }
 
-.spell-duration .spellConcentration {
+
+.spell-components, 
+.spell-duration {
+    margin-top: 0.12rem;
+}
+
+/*CONCENTRATION*/
+
+.spell-duration {
+    position: relative;
+}
+
+.spell-duration 
+.spellConcentration {
     position: absolute;
     width: 1rem;
     height: 1.1rem;
     right: 0rem;
 }
-
 
 /*DESCRIPTION*/
 
@@ -288,169 +251,100 @@ Span h3 {
     word-wrap: break-word;
 }
 
-.spell-higherlevelsDivider {
-    background-color: #17c2de;
+.spell-higherlevels-Base,
+.spell-higherlevels-Bard,
+.spell-higherlevels-Cleric,
+.spell-higherlevels-Druid,
+.spell-higherlevels-Paladin,
+.spell-higherlevels-Ranger,
+.spell-higherlevels-Sorcerer,
+.spell-higherlevels-Warlock,
+.spell-higherlevels-Wizard {
+
+    height: 0.5rem;
+    width: 10.6375rem;
+    position: absolute;
+    top: 12rem;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
 }
 
 .spell-higherlevels-Base {
     background-color: #de3f17 !important;
-    height: 0.5rem;
-    width: 10.6375rem;
-    position: absolute;
-    top: 12rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
 }
 
 .spell-higherlevels-Bard {
     background-color: #c034a1 !important;
-    height: 0.5rem;
-    width: 10.6375rem;
-    position: absolute;
-    top: 12rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
 }
 
 .spell-higherlevels-Cleric {
     background-color: #d3a122 !important;
-    height: 0.5rem;
-    width: 10.6375rem;
-    position: absolute;
-    top: 12rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
 }
 
 .spell-higherlevels-Druid {
     background-color: #64a84c !important;
-    height: 0.5rem;
-    width: 10.6375rem;
-    position: absolute;
-    top: 12rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
 }
 
 .spell-higherlevels-Paladin {
     background-color: #17c2de !important;
-    height: 0.5rem;
-    width: 10.6375rem;
-    position: absolute;
-    top: 12rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
 }
 
 .spell-higherlevels-Ranger {
     background-color: #a46f50 !important;
-    height: 0.5rem;
-    width: 10.6375rem;
-    position: absolute;
-    top: 12rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
 }
 
 .spell-higherlevels-Sorcerer {
     background-color: #935795 !important;
-    height: 0.5rem;
-    width: 10.6375rem;
-    position: absolute;
-    top: 12rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
 }
 
 .spell-higherlevels-Warlock {
     background-color: #675493 !important;
-    height: 0.5rem;
-    width: 10.6375rem;
-    position: absolute;
-    top: 12rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
 }
 
 .spell-higherlevels-Wizard {
     background-color: #557bb2 !important;
-    height: 0.5rem;
-    width: 10.6375rem;
-    position: absolute;
-    top: 12rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
 }
 
 /*BUTTONS*/
 
-.delete-button {
-    padding: 3px 5px;
-    border: none;
-    width: 13px;
-    height: 13px;
-    background-color: rgba(255, 255, 255, 0);
-    color: rgba(255, 255, 255, 0);
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 8px;
-    cursor: pointer;
-    margin-left: 6%;
-    margin-top: 2%;
+.delete-button, 
+.delete-image {
+    left: 58.5%;
+    top: 14.8rem;
     position: absolute;
-    top: 91%;
-    left: 52.5%;
-    z-index: 11;
 }
 
+.save-button, 
+.save-image {
+    left: 67.5%;
+    top: 14.8rem;
+    position: absolute;
+}
 
+.delete-button, 
 .save-button {
     padding: 3px 5px;
     border: none;
-    width: 13px;
-    height: 13px;
+    width: 0.8125rem;
+    height: 0.8125rem;
     background-color: rgba(255, 255, 255, 0);
     color: rgba(255, 255, 255, 0);
-    text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 8px;
     cursor: pointer;
-    margin-top: 2%;
-    position: absolute;
-    top: 91%;
-    left: 67.5%;
     z-index: 11;
 }
 
-.delete-image {
-    position: absolute;
-    top: 92.5%;
-    left: 58.5%;
-}
-
-.save-image {
-    position: absolute;
-    top: 92.5%;
-    left: 68%;
-}
-
-.delete-image,
+.delete-image, 
 .save-image {
     transform: scale(0);
     transition: all 0.3s ease-in-out;
+    width: 0.8125rem !important;
+    height: 0.8125rem !important;
 }
 
 .card-container:hover .delete-image,
 .card-container:hover .save-image {
     transform: scale(1);
-}
-
-.delete-image,
-.save-image {
-    width: 13px !important; /* desired width */
-    height: 13px !important; /* desired height */
 }
 
 /*--------------HOLO--------------*/
