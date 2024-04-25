@@ -2,22 +2,24 @@ package com.spellCardCreator.entities;
 
 public class Card extends Entity{
 
-    private String spellName;
-    private String spellLevel;
-    private String spellClass;
-    private String spellSchool;
-    private String spellCastingTime;
-    private String spellRange;
-    private String spellComponents;
-    private String spellDuration;
+    private String  spellName;
+    private String  spellLevel;
+    private String  spellClass;
+    private String  spellSchool;
+    private String  spellCastingTime;
+    private String  spellRange;
+    private boolean spellComponentsVerbal;
+    private boolean spellComponentsSomatic;
+    private boolean spellComponentsMaterial;
+    private String  spellDuration;
     private boolean spellConcentration;    
-    private String spellDescription;
-    private String spellHigherLevels;
+    private String  spellDescription;
+    private String  spellHigherLevels;
 
     public Card(){}
 
     public Card(int id, String spellName, String spellLevel, String spellClass, String spellSchool, String spellCastingTime,
-            String spellRange, String spellComponents, String spellDuration, boolean spellConcentration,
+            String spellRange, boolean spellComponentsVerbal, boolean spellComponentsSomatic, boolean spellComponentsMaterial, String spellDuration, boolean spellConcentration,
             String spellDescription, String spellHigherLevels) {
         super(id);
         setSpellName(spellName);
@@ -26,7 +28,9 @@ public class Card extends Entity{
         setSpellSchool(spellSchool);
         setSpellCastingTime(spellCastingTime);
         setSpellRange(spellRange);
-        setSpellComponents(spellComponents);
+        setSpellComponentsVerbal(spellComponentsVerbal);
+        setSpellComponentsSomatic(spellComponentsSomatic);
+        setSpellComponentsMaterial(spellComponentsMaterial);
         setSpellDuration(spellDuration);
         setSpellConcentration(spellConcentration);
         setSpellDescription(spellDescription);
@@ -81,12 +85,28 @@ public class Card extends Entity{
         this.spellRange = spellRange;
     }
 
-    public String getSpellComponents() {
-        return spellComponents;
+    public boolean isSpellComponentsVerbal() {
+        return spellComponentsVerbal;
     }
 
-    public void setSpellComponents(String spellComponents) {
-        this.spellComponents = spellComponents;
+    public void setSpellComponentsVerbal(boolean spellComponentsVerbal) {
+        this.spellComponentsVerbal = spellComponentsVerbal;
+    }
+
+    public boolean isSpellComponentsSomatic() {
+        return spellComponentsSomatic;
+    }
+
+    public void setSpellComponentsSomatic(boolean spellComponentsSomatic) {
+        this.spellComponentsSomatic = spellComponentsSomatic;
+    }
+
+    public boolean isSpellComponentsMaterial() {
+        return spellComponentsMaterial;
+    }
+
+    public void setSpellComponentsMaterial(boolean spellComponentsMaterial) {
+        this.spellComponentsMaterial = spellComponentsMaterial;
     }
 
     public String getSpellDuration() {

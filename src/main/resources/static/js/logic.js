@@ -213,9 +213,9 @@ function add() {
     const spellDescription = document.getElementById("spellDescription").value;
     const spellHigherLevels = document.getElementById("spellHigherLevels").value;
     
-    const componentsVerbal = document.getElementById("spellComponentsVerbal").checked ? "V" : null;
-    const componentsSomatic = document.getElementById("spellComponentsSomatic").checked ? "S" : null;
-    const componentsMaterial = document.getElementById("spellComponentsMaterial").checked ? "M" : null;
+    const spellComponentsVerbal = document.getElementById("spellComponentsVerbal").checked ? "V" : null;
+    const spellComponentsSomatic = document.getElementById("spellComponentsSomatic").checked ? "S" : null;
+    const spellComponentsMaterial = document.getElementById("spellComponentsMaterial").checked ? "M" : null;
 
     const hasFilledEverything = (
                                 spellName.length > 0 
@@ -228,9 +228,9 @@ function add() {
                                 && spellDescription.length > 0 
                                 );
     const hasNoComponents = (
-        componentsVerbal == null 
-                            && componentsSomatic == null 
-                            && componentsMaterial == null
+                            spellComponentsVerbal == null 
+                            && spellComponentsSomatic == null 
+                            && spellComponentsMaterial == null
                             );
 
     if (!hasFilledEverything) {
@@ -250,7 +250,7 @@ function add() {
         }
     }
 
-    const spellComponentsArray = [componentsVerbal, componentsSomatic, componentsMaterial].filter(Boolean);
+    const spellComponentsArray = [spellComponentsVerbal, spellComponentsSomatic, spellComponentsMaterial].filter(Boolean);
     const spellComponents = spellComponentsArray.join(", ");
 
     const newCard = {
