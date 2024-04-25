@@ -1,55 +1,52 @@
 /*---------------------HEADER---------------------*/
 
-.header {
+header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999;
-}
-
-.header ul {
     outline-style: solid;
     outline-color: rgb(182, 0, 0);
     outline-width: 0.15rem;
-    background-color: black;
+    background-color: rgb(24, 25, 27);
     display: flex;
+    justify-content: center;
     align-items: center;
     list-style-type: none; /* Removes bullets */
     height: 4rem;
     padding: 0 0.3rem;
+    z-index: 10;
 }
 
-.header li {
-    display: list-item;
-    padding: 0 0.5rem;
+header .header-element {
+    margin: 0 0.5rem;
 }
 
-.header span {
+header span {
     height: 100%;
 }
 
-.header .logo {
+header .logo {
     width: 3rem;
-    margin: 0.19rem 0 0 0;
+    height: 3rem;
 }
 
-.header .font {
+header .font {
     color: rgb(235, 235, 235);
     font-family: sans-serif;
 }
 
-.header .font #title {
+header .font #title {
     text-transform: none !important;
     font-weight: bold;
 }
 
-.header .font p{
-    text-transform: uppercase;
-    margin: 0.3rem 0 0 0;
+header .font p{
+    font-size: 110%;
     cursor: pointer;
+    font-weight: 400;
 }
 
-.header .divider {
+header .divider {
     width: 0.06rem;
     height: 3rem;
     background-color: #919191;
@@ -217,7 +214,7 @@ select {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .dropdown{
         visibility: hidden;
         opacity: 0;

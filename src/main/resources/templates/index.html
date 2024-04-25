@@ -15,12 +15,10 @@
 
 <body>
 
-    <header class="header">
-        <ul>
-            <li><img class="logo"src="../images/Header_Logo.png" alt="logo"></li>
-            <li><span class="font"><h1 id="title">Spell Card Creator</h1></span></li>
-            <li><div class="divider"></div></li>
-            <li>
+    <header>
+
+            <div class="header-element"><img class="logo"src="../images/Header_Logo.png" alt="logo"></div>
+            <div class="header-element">
                 <div class="dropdown">
                     <span class="font"><p>Create a new card</p></span>
                     <div class="newcard-dropdown">
@@ -154,14 +152,12 @@
                         </form>
                     </div>
                 </div>
-            </li>
-        </ul>
+            </div>
+
     </header>
 
-    
-
     <div class="cards-collection">
-        <div class="row" id="cards"></div>
+        <div class="row" id="cards"></div> <!--Content of div comes from js file-->
     </div>
 
     <footer>

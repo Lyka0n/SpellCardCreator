@@ -251,22 +251,11 @@ Span h3 {
     word-wrap: break-word;
 }
 
-.spell-higherlevels-Base,
-.spell-higherlevels-Bard,
-.spell-higherlevels-Cleric,
-.spell-higherlevels-Druid,
-.spell-higherlevels-Paladin,
-.spell-higherlevels-Ranger,
-.spell-higherlevels-Sorcerer,
-.spell-higherlevels-Warlock,
-.spell-higherlevels-Wizard {
-
+[class^="spell-higherlevels-"] {
     height: 0.5rem;
-    width: 10.6375rem;
+    width: 100%;
     position: absolute;
     top: 12rem;
-    margin-left: 0.4rem;
-    margin-right: 0.4rem;
 }
 
 .spell-higherlevels-Base {
