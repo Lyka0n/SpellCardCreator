@@ -40,7 +40,7 @@ header .font #title {
     font-weight: bold;
 }
 
-header .font p{
+header .font p {
     font-size: 110%;
     cursor: pointer;
     font-weight: 400;
@@ -89,7 +89,7 @@ header .divider {
     }
 }
 
-.newcard-dropdown table{
+.newcard-dropdown table {
     margin: auto;
     width: 60%;
     height: 100%;
@@ -172,7 +172,7 @@ select {
     font-weight: bold;
 }
 
-.newcard-dropdown .components input[type="checkbox"]{
+.newcard-dropdown .components input[type="checkbox"] {
     -webkit-appearance: initial;
     appearance: initial;
     width: 2rem;
@@ -202,7 +202,7 @@ select {
         font-size: 90%;
     }
 
-    .newcard-dropdown .components input[type="checkbox"]{
+    .newcard-dropdown .components input[type="checkbox"] {
         -webkit-appearance: initial;
         appearance: initial;
         width: 1.1rem;
@@ -215,16 +215,16 @@ select {
 }
 
 @media only screen and (max-width: 900px) {
-    .dropdown{
+    .dropdown .newcard-dropdown {
         visibility: hidden;
         opacity: 0;
         transition: visibility 0.5s, opacity 0.5s, left 0.5s ease-in-out;
-        left: 100%;
+        top: 100%;
     }
     
-    .dropdown.active{
+    .dropdown.active {
         visibility: visible;
         opacity: 1;
         left: 0;
-    }  
+    }
 }
