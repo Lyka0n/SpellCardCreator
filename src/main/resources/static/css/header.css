@@ -163,7 +163,8 @@ select {
 
 .newcard-dropdown .components-checkbox-verbal::before,
 .newcard-dropdown .components-checkbox-somatic::before,
-.newcard-dropdown .components-checkbox-material::before {
+.newcard-dropdown .components-checkbox-material::before,
+.newcard-dropdown .concentration-checkbox::before {
     content: attr(value);
     position: absolute;
     top: 50%;
@@ -172,7 +173,8 @@ select {
     font-weight: bold;
 }
 
-.newcard-dropdown .components input[type="checkbox"] {
+.newcard-dropdown .components input[type="checkbox"],
+.newcard-dropdown .concentration input[type="checkbox"] {
     -webkit-appearance: initial;
     appearance: initial;
     width: 2rem;
@@ -184,15 +186,25 @@ select {
     font-size: 120%;
 }
 
-.newcard-dropdown .components input[type="checkbox"]:checked {
+.newcard-dropdown .concentration input[type="checkbox"] {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+}
+
+.newcard-dropdown .components input[type="checkbox"]:checked,
+.newcard-dropdown .concentration input[type="checkbox"]:checked {
     background: rgb(214, 0, 0);
     color: white;
 }
 
+.newcard-dropdown .concentration {
+    display: flex;
+    justify-content: center;
+}
+
 .newcard-dropdown #spellConcentration {
     position: relative;
-    top: -2%;
-    left: 1%;
+    top: -0.3rem;
 }
 
 /*---------------------NEW CARD MENU RESIZE---------------------*/

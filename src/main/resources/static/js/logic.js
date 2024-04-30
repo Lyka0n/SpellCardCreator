@@ -416,5 +416,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-//TODO: Fix y description and higher level description when taking a screenshot
+//TODO: Divide js file
+//TODO: Side menu dropdown for mobile
+//TODO: Remove Watermark from cards
 //TODO: Sorting
